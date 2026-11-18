@@ -53,3 +53,31 @@ add_filter( 'query_loop_block_query_vars', function ( $vars ) {
 	if ( ( $vars['post_type'] ?? '' ) === 'coureur' ) { $vars['orderby'] = 'menu_order title'; $vars['order'] = 'ASC'; }
 	return $vars;
 } );
+
+// Pas de script emoji WordPress (plus léger, plus rapide).
+add_action( 'init', function () {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+} );
+
+// Menu mobile : ouverture/fermeture fiable, même sans le script interactif de WordPress.
+add_action( 'wp_footer', function () { ?>
+<script>
+document.addEventListener('click',function(e){
+  var open=e.target.closest('.wp-block-navigation__responsive-container-open');
+  var close=e.target.closest('.wp-block-navigation__responsive-container-close');
+  var nav=(open||close)&&(open||close).closest('.wp-block-navigation');
+  if(!nav)return;
+  var box=nav.querySelector('.wp-block-navigation__responsive-container');
+  if(!box)return;
+  e.preventDefault();e.stopImmediatePropagation();
+  var on=!!open;
+  box.classList.toggle('is-menu-open',on);box.classList.toggle('has-modal-open',on);
+  document.documentElement.classList.toggle('has-modal-open',on);
+},true);
+</script>
+<?php } );

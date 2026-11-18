@@ -19,7 +19,7 @@ $img = get_theme_file_uri( 'assets/img/' );
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"l"} -->
-<p class="has-l-font-size">Une équipe UCI Continental en route vers la ProTeam, un club formateur, deux Paris-Roubaix et un camp de base ouvert à tous.</p>
+<p class="has-l-font-size">Une équipe UCI Continental, un club formateur, deux Paris-Roubaix et un camp de base ouvert à tous.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -153,14 +153,7 @@ foreach ( $routes as $r ) : ?>
 <!-- wp:paragraph {"fontSize":"l"} -->
 <p class="has-l-font-size"><strong>[0]</strong> victoires · <strong>[0]</strong> podiums · <strong>[0]</strong> top 10</p>
 <!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.12em"},"color":{"text":"#B5B5BA"}},"fontSize":"xs"} -->
-<p class="has-text-color has-xs-font-size" style="color:#B5B5BA;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">Objectif ProTeam</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:html -->
-<div class="vcr-gauge" role="img" aria-label="Progression vers l'objectif ProTeam"><span style="width:62%"></span></div>
-<!-- /wp:html --></div>
+</div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->

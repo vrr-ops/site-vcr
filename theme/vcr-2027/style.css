@@ -89,3 +89,29 @@ License: GPLv2 or later
   .vcr-header .wp-block-button__link{padding:.6rem 1rem!important;font-size:.75rem}
   .vcr-logo{font-size:1.375rem}
 }
+
+/* Navigation : liens propres + menu mobile plein écran */
+.vcr-header .wp-block-navigation a{text-decoration:none;color:var(--wp--preset--color--noir)}
+.vcr-header .wp-block-navigation__responsive-container-open,
+.vcr-header .wp-block-navigation__responsive-container-close{background:transparent;border:0;padding:.5rem;color:var(--wp--preset--color--noir);cursor:pointer}
+.vcr-header .wp-block-navigation__responsive-container-open svg{width:28px;height:28px}
+.wp-block-navigation__responsive-container.is-menu-open{background:var(--wp--preset--color--noir)!important;color:#fff!important;padding:1.5rem var(--wp--preset--spacing--40)!important}
+.wp-block-navigation__responsive-container.is-menu-open::after{content:"";position:absolute;right:-60px;bottom:-40px;width:360px;height:520px;background:url("assets/img/arch-rose.svg") no-repeat center/contain;opacity:.35;pointer-events:none}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close{color:#fff;top:1.25rem;right:1.25rem}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close svg{width:30px;height:30px}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content{padding-top:4.5rem!important;align-items:flex-start!important}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container{gap:1.25rem!important;align-items:flex-start!important}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content{font-family:var(--wp--preset--font-family--archivo);font-size:2rem;line-height:1.05;letter-spacing:-.01em;color:#fff!important;text-decoration:none}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item:first-child .wp-block-navigation-item__content{color:var(--wp--preset--color--piste)!important}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover{color:var(--wp--preset--color--piste)!important}
+
+/* Cartes "routes" : toute la carte est cliquable */
+.vcr-route{cursor:pointer;padding-bottom:3rem!important}
+.vcr-route h3 a{color:var(--wp--preset--color--noir)!important;text-decoration:none!important}
+.vcr-route a:focus-visible{outline:none}
+.vcr-route:focus-within{outline:3px solid var(--wp--preset--color--rose);outline-offset:3px}
+.vcr-route::after{content:"→";position:absolute;left:1.375rem;bottom:1.1rem;font-weight:800;font-size:1.25rem;color:var(--wp--preset--color--rose-fonce);transition:transform .15s ease}
+.vcr-route:hover h3 a{color:var(--wp--preset--color--rose-fonce)!important}
+.vcr-route:hover::after{transform:translateX(6px)}
+@media (max-width:760px){.vcr-topbar p:last-child{display:none}.vcr-topbar{font-size:.75rem!important}}
+.vcr-score{white-space:nowrap}
