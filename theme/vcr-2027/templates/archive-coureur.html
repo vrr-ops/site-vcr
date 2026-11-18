@@ -1,0 +1,32 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull"><!-- wp:group {"align":"full","className":"vcr-arch","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"backgroundColor":"noir","textColor":"blanc-pur","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull vcr-arch has-blanc-pur-color has-noir-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:paragraph {"className":"is-style-kicker","textColor":"piste"} -->
+<p class="is-style-kicker has-piste-color has-text-color">Van Rysel Roubaix · UCI Continental</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Effectif 2027</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"l"} -->
+<p class="has-l-font-size">12 coureurs, 4 nationalités : sprinteurs, puncheurs, spécialistes des classiques et du chrono, réunis autour d'un objectif, les pavés.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:query {"queryId":5,"query":{"perPage":40,"pages":0,"offset":0,"postType":"coureur","order":"asc","orderBy":"menu_order","inherit":true}} -->
+<div class="wp-block-query"><!-- wp:post-template {"className":"vcr-rider-card","layout":{"type":"grid","columnCount":6,"minimumColumnWidth":"10rem"}} -->
+<!-- wp:post-featured-image {"isLink":true} /-->
+<!-- wp:post-title {"isLink":true,"level":3} /-->
+<!-- wp:post-terms {"term":"specialite"} /-->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"nationalite"}}}},"className":"vcr-meta","textColor":"gris"} -->
+<p class="vcr-meta has-gris-color has-text-color"></p>
+<!-- /wp:paragraph -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

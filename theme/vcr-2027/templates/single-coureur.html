@@ -1,0 +1,94 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull"><!-- wp:group {"align":"full","className":"vcr-arch vcr-rider-hero","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"backgroundColor":"rose","textColor":"blanc-pur","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull vcr-arch vcr-rider-hero has-blanc-pur-color has-rose-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"4rem"}}}} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"40%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"><!-- wp:post-featured-image /--></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"numero"}}}},"className":"vcr-num"} -->
+<p class="vcr-num"></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:post-terms {"term":"specialite","className":"is-style-kicker"} /-->
+
+<!-- wp:post-title {"level":1} /-->
+
+<!-- wp:group {"className":"vcr-facts","layout":{"type":"grid","columnCount":3,"minimumColumnWidth":"8rem"}} -->
+<div class="wp-block-group vcr-facts"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.25rem"}}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"vcr-meta"} -->
+<p class="vcr-meta">Nationalité</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"nationalite"}}}},"fontSize":"l","style":{"typography":{"fontWeight":"700"}}} -->
+<p class="has-l-font-size" style="font-weight:700"></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.25rem"}}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"vcr-meta"} -->
+<p class="vcr-meta">Saison</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"saison"}}}},"fontSize":"l","style":{"typography":{"fontWeight":"700"}}} -->
+<p class="has-l-font-size" style="font-weight:700"></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.25rem"}}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"vcr-meta"} -->
+<p class="vcr-meta">Équipe</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"l","style":{"typography":{"fontWeight":"700"}}} -->
+<p class="has-l-font-size" style="font-weight:700">Van Rysel Roubaix</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+<div class="wp-block-buttons" style="margin-top:2rem"><!-- wp:button {"backgroundColor":"noir"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-noir-background-color has-background wp-element-button" href="/boutique/">Son maillot floqué</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/equipe-pro/race-center/">Ses prochaines courses</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:paragraph {"className":"is-style-kicker"} -->
+<p class="is-style-kicker">Portrait</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+<!-- wp:html -->
+<div class="vcr-stripe" style="width:160px;margin-top:2rem"></div>
+<!-- /wp:html --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"backgroundColor":"beton","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group alignfull has-beton-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
+<h2 class="wp-block-heading">Ses coéquipiers</h2>
+<!-- /wp:heading -->
+
+<!-- wp:query {"queryId":6,"query":{"perPage":6,"pages":0,"offset":0,"postType":"coureur","order":"asc","orderBy":"rand","inherit":false}} -->
+<div class="wp-block-query"><!-- wp:post-template {"className":"vcr-rider-card","layout":{"type":"grid","columnCount":6,"minimumColumnWidth":"10rem"}} -->
+<!-- wp:post-featured-image {"isLink":true} /-->
+<!-- wp:post-title {"isLink":true,"level":3} /-->
+<!-- wp:post-terms {"term":"specialite"} /-->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"nationalite"}}}},"className":"vcr-meta","textColor":"gris"} -->
+<p class="vcr-meta has-gris-color has-text-color"></p>
+<!-- /wp:paragraph -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

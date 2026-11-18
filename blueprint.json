@@ -1,0 +1,11 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": { "title": "VCR 2027 — nouveau site", "author": "Vélo Club Roubaix" },
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "features": { "networking": true },
+  "steps": [
+    { "step": "importWordPressFiles", "wordPressFilesZip": { "resource": "url", "url": "https://raw.githubusercontent.com/vrr-ops/site-vcr/main/playground/site.zip" } },
+    { "step": "login", "username": "lio", "password": "vcr2027" }
+  ]
+}

@@ -1,0 +1,91 @@
+/*
+Theme Name: VCR 2027
+Theme URI: https://www.velo-club-roubaix.fr
+Author: Vélo Club Roubaix
+Description: Thème du Vélo Club Roubaix / Van Rysel Roubaix — « Toutes les routes démarrent du vélodrome ».
+Version: 0.1.0
+Requires at least: 6.6
+Requires PHP: 8.0
+Text Domain: vcr-2027
+License: GPLv2 or later
+*/
+
+/* Sur-titre rose (style de paragraphe) */
+.is-style-kicker{font-size:.8125rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--wp--preset--color--rose-fonce);margin-bottom:.5rem}
+.has-rose-background-color .is-style-kicker,.has-noir-background-color .is-style-kicker{color:inherit}
+
+/* Bouton contour */
+.wp-block-button.is-style-outline>.wp-block-button__link{background:transparent;border:2px solid currentColor;color:inherit}
+
+/* Motif couloirs du vélodrome */
+.vcr-arch{position:relative;overflow:hidden;isolation:isolate}
+.vcr-arch::before{content:"";position:absolute;z-index:-1;right:-40px;top:-40px;width:620px;height:760px;background:url("assets/img/arch.svg") no-repeat top center/contain;opacity:.9;pointer-events:none}
+.vcr-arch.vcr-arch--center::before{right:auto;left:50%;margin-left:-350px;width:700px;background-image:url("assets/img/arch-rose.svg");opacity:.45}
+.vcr-stripe{height:8px;border-radius:999px;background:repeating-linear-gradient(90deg,var(--wp--preset--color--rose) 0 18px,var(--wp--preset--color--piste) 18px 24px)}
+
+/* Bandeau infos */
+.vcr-topbar a{color:var(--wp--preset--color--piste)}
+.vcr-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--wp--preset--color--rose);margin-right:.5rem;vertical-align:middle}
+
+/* Cartes "routes" */
+.vcr-route{border-top-width:6px!important;transition:transform .15s ease,box-shadow .15s ease;height:100%}
+.vcr-route:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(18,18,20,.08)}
+.vcr-route a{color:inherit;text-decoration:none}
+.vcr-route a::after{content:"";position:absolute;inset:0}
+.vcr-route{position:relative}
+
+/* Scoreboard */
+.vcr-score{font-family:var(--wp--preset--font-family--anton);line-height:1;color:var(--wp--preset--color--piste)}
+
+/* Cartes coureurs (placeholder portrait) */
+.vcr-rider-photo{aspect-ratio:4/5;border-radius:14px;background:linear-gradient(160deg,#E4506B,#B81F3B);display:flex;align-items:flex-end;padding:14px;color:rgba(255,255,255,.85);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;position:relative}
+.vcr-rider-photo span.num{position:absolute;top:8px;right:14px;font-family:var(--wp--preset--font-family--anton);font-size:2.5rem;color:rgba(255,255,255,.35);letter-spacing:0}
+
+/* Jauge ProTeam */
+.vcr-gauge{height:12px;background:#2A2A2E;border-radius:999px;overflow:hidden}
+.vcr-gauge>span{display:block;height:100%;background:repeating-linear-gradient(90deg,#DC3553 0 18px,#F4B3C0 18px 24px)}
+
+/* Liste d'articles */
+.wp-block-post-template .wp-block-post-featured-image img{border-radius:14px;aspect-ratio:16/10;object-fit:cover}
+.wp-block-post-template .wp-block-post-title a{color:var(--wp--preset--color--noir);text-decoration:none}
+.wp-block-post-template .wp-block-post-title a:hover{color:var(--wp--preset--color--rose-fonce)}
+.wp-block-post-terms a{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+
+/* En-tête */
+.vcr-logo{font-family:var(--wp--preset--font-family--archivo);font-size:1.625rem;letter-spacing:-.01em;text-decoration:none;color:var(--wp--preset--color--noir)}
+.vcr-logo b{color:var(--wp--preset--color--rose);font-weight:400}
+.vcr-header .wp-block-navigation a:hover{color:var(--wp--preset--color--rose-fonce)}
+
+/* Pied de page */
+.vcr-footer a{color:#B5B5BA;text-decoration:none}
+.vcr-footer a:hover{color:#fff}
+
+/* Contenu importé de l'ancien site : images fluides */
+.entry-content img,.wp-block-post-content img{max-width:100%;height:auto}
+
+/* Mobile */
+@media (max-width: 600px){
+  h1.wp-block-heading{font-size:2.6rem!important;overflow-wrap:anywhere}
+  .vcr-arch::before{width:340px;height:420px;right:-90px;top:-20px;opacity:.3}
+  .vcr-arch.vcr-arch--center::before{width:420px;margin-left:-210px}
+  .vcr-topbar p{text-align:center}
+}
+
+/* Coureurs */
+.vcr-rider-card .wp-block-post-featured-image{margin:0}
+.vcr-rider-card .wp-block-post-featured-image img{aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:14px;background:linear-gradient(160deg,#E4506B,#B81F3B)}
+.vcr-rider-card .wp-block-post-title{font-family:var(--wp--preset--font-family--archivo);text-transform:uppercase;font-size:1rem;margin-top:.6rem}
+.vcr-rider-card .wp-block-post-title a{color:var(--wp--preset--color--noir);text-decoration:none}
+.vcr-rider-card .wp-block-post-terms a{color:var(--wp--preset--color--gris);font-weight:600;letter-spacing:0;text-transform:none;font-size:.875rem}
+.vcr-meta{font-size:.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.vcr-rider-hero .wp-block-post-featured-image img{aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:220px 220px 18px 18px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.vcr-rider-hero .wp-block-post-terms a{color:#fff;text-decoration:none}
+.vcr-num{font-family:var(--wp--preset--font-family--anton);font-size:clamp(4rem,10vw,9rem);line-height:.9;color:rgba(255,255,255,.35)}
+.vcr-facts>*{border-top:1px solid rgba(255,255,255,.35);padding-top:.75rem}
+.vcr-rider-hero.vcr-arch::before{opacity:.35}
+
+@media (max-width:600px){
+  .vcr-header{flex-wrap:nowrap!important;gap:.75rem}
+  .vcr-header .wp-block-button__link{padding:.6rem 1rem!important;font-size:.75rem}
+  .vcr-logo{font-size:1.375rem}
+}
